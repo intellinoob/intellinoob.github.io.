@@ -14,18 +14,18 @@
   </head>
   <body>
     <div class="veil"></div>
+
     <header class="hero">
       <div class="hero__glow"></div>
       <div class="hero__content">
-        <p class="eyebrow">For Esther</p>
-        <h1>Will you be my Valentine?</h1>
-        <p class="subtitle">
-          A small, shimmering universe built just for you, Esther — with all the soft
-          corners, warm light, and impossible luck of finding you.
+        <p class="eyebrow" data-hero-eyebrow>For Esther</p>
+        <h1 data-hero-title>Will you be my Valentine?</h1>
+        <p class="subtitle" data-hero-subtitle>
+          A small, shimmering universe built just for you, Esther — with all the soft corners,
+          warm light, and impossible luck of finding you.
         </p>
         <div class="hero__cta">
           <button class="btn" data-open-letter>Open the letter</button>
-          <button class="btn btn--ghost" data-scroll-to="#reasons">See why</button>
         </div>
       </div>
       <div class="hero__card" aria-hidden="true">
@@ -40,89 +40,37 @@
     <main>
       <section class="section letter" id="letter">
         <div class="section__title">
-          <h2>A Letter, Unfolding</h2>
-          <p>Hover, tap, or breathe — it opens when you are ready.</p>
+          <h2 data-letter-title>A Letter, Unfolding</h2>
+          <p data-letter-subtitle>Hover, tap, or breathe — it opens when you are ready.</p>
         </div>
         <div class="letter__wrap" data-letter>
-          <div class="letter__panel">
-            <p>
-              Esther, I keep finding new ways to love you. In the quiet mornings, in the
-              loud laughter, in the way time stops when you look at me. You make the ordinary
-              feel like a secret celebration.
-            </p>
-            <p>
-              Thank you for being you — for your tenderness, your spark, your steady heart.
-              I want to keep building days with you that feel like this page: soft light,
-              music in the background, and your name written everywhere.
-            </p>
-            <p class="letter__sign">Forever yours,</p>
-            <p class="letter__sign letter__sign--name">Stephen</p>
-          </div>
+          <div class="letter__panel" data-letter-body></div>
         </div>
       </section>
 
       <section class="section reasons" id="reasons">
         <div class="section__title">
-          <h2>Reasons I Adore You</h2>
-          <p>Some are big, some are tiny, all are true.</p>
+          <h2 data-reasons-title>Reasons I Adore You</h2>
+          <p data-reasons-subtitle>Some are big, some are tiny, all are true.</p>
         </div>
-        <div class="reasons__grid">
-          <article class="reason">
-            <h3>Your laugh</h3>
-            <p>It makes the room feel brighter, like someone opened the windows.</p>
-          </article>
-          <article class="reason">
-            <h3>Your kindness</h3>
-            <p>You lead with gentleness, even when no one is watching.</p>
-          </article>
-          <article class="reason">
-            <h3>Your curiosity</h3>
-            <p>You notice details that turn everyday moments into memories.</p>
-          </article>
-          <article class="reason">
-            <h3>Your courage</h3>
-            <p>You choose love, even when it is vulnerable and brave.</p>
-          </article>
-        </div>
+        <div class="reasons__grid" data-reasons-grid></div>
       </section>
 
       <section class="section timeline" id="timeline">
         <div class="section__title">
-          <h2>Our Little Constellations</h2>
-          <p>A few sparkling points in the sky we share.</p>
+          <h2 data-timeline-title>Our Little Constellations</h2>
+          <p data-timeline-subtitle>A few sparkling points in the sky we share.</p>
         </div>
-        <div class="timeline__track">
-          <div class="moment">
-            <span>1</span>
-            <div>
-              <h3>The day we met</h3>
-              <p>Everything shifted into a warmer color.</p>
-            </div>
-          </div>
-          <div class="moment">
-            <span>2</span>
-            <div>
-              <h3>Our first adventure</h3>
-              <p>We laughed until it felt like flying.</p>
-            </div>
-          </div>
-          <div class="moment">
-            <span>3</span>
-            <div>
-              <h3>Today</h3>
-              <p>Still falling, still choosing you.</p>
-            </div>
-          </div>
-        </div>
+        <div class="timeline__track" data-timeline></div>
       </section>
 
       <section class="section yes" id="yes">
         <div class="yes__card">
-          <h2>Esther, be my Valentine?</h2>
-          <p>I promise to keep loving you with intention, softness, and a little magic.</p>
+          <h2 data-final-title>Esther, be my Valentine?</h2>
+          <p data-final-subtitle>I promise to keep loving you with intention, softness, and a little magic.</p>
           <div class="yes__actions">
-            <button class="btn" data-confetti>Yes</button>
-            <button class="btn btn--ghost" data-confetti>Absolutely</button>
+            <button class="btn" data-confetti data-yes>Yes</button>
+            <button class="btn btn--ghost" data-no>No</button>
           </div>
         </div>
       </section>
@@ -135,15 +83,16 @@
     <div class="modal" data-modal>
       <div class="modal__content" role="dialog" aria-modal="true" aria-label="Love letter">
         <button class="modal__close" data-close>&times;</button>
-        <h3>Dear Esther,</h3>
-        <p>
-          Loving you is my favorite art form. You are the melody I replay, the place I
-          rest, the wild idea that turned into a home. Every day with you is a Valentine.
+        <h3 data-modal-title>Dear Esther,</h3>
+        <p data-modal-body>
+          Loving you is my favorite art form. You are the melody I replay, the place I rest, the wild
+          idea that turned into a home. Every day with you is a Valentine. So here is me, asking
+          again: will you keep choosing me, too?
         </p>
-        <p>So here is me, asking again: will you keep choosing me, too?</p>
       </div>
     </div>
 
+    <script src="content.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

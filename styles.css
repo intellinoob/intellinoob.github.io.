@@ -39,14 +39,14 @@ body {
   z-index: 0;
 }
 
+
 .hero {
   position: relative;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 3rem;
-  padding: 5rem clamp(1.5rem, 5vw, 6rem) 4rem;
+  padding: 4rem clamp(1.5rem, 5vw, 6rem) 2rem;
   align-items: center;
-  z-index: 1;
 }
 
 .hero__glow {
@@ -169,7 +169,6 @@ body {
 .section {
   padding: 4rem clamp(1.5rem, 5vw, 6rem);
   position: relative;
-  z-index: 1;
 }
 
 .section__title {
@@ -215,10 +214,6 @@ body {
 .letter__sign {
   font-family: var(--accent-font);
   font-size: 1.4rem;
-}
-
-.letter__sign--name {
-  margin-top: 0.2rem;
 }
 
 .reasons__grid {
@@ -299,6 +294,7 @@ body {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .footer {
@@ -396,7 +392,7 @@ body {
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: 4rem;
+    padding-top: 3rem;
   }
 
   .hero__content h1 {
