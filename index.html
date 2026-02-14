@@ -1,98 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Esther, My Valentine</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steve & Esther - Valentine Story</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Space+Grotesk:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="veil"></div>
-
-    <header class="hero">
-      <div class="hero__glow"></div>
-      <div class="hero__content">
-        <p class="eyebrow" data-hero-eyebrow>For Esther</p>
-        <h1 data-hero-title>Will you be my Valentine?</h1>
-        <p class="subtitle" data-hero-subtitle>
-          A small, shimmering universe built just for you, Esther — with all the soft corners,
-          warm light, and impossible luck of finding you.
-        </p>
-        <div class="hero__cta">
-          <button class="btn" data-open-letter>Open the letter</button>
+    <main class="app">
+      <section id="start" class="scene active" aria-label="Start scene">
+        <h1 class="pixel-title">Steve's Valentine Journey</h1>
+        <div class="stone-wrap">
+          <img id="start-fox" class="pixel-fox" src="assets/pixel-fox.png" alt="Steve the fox sitting on a stone" />
+          <div class="stone" aria-hidden="true"></div>
         </div>
-      </div>
-      <div class="hero__card" aria-hidden="true">
-        <div class="card__frame">
-          <div class="card__heart"></div>
-          <p class="card__title">Esther</p>
-          <p class="card__note">You make every day softer.</p>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <section class="section letter" id="letter">
-        <div class="section__title">
-          <h2 data-letter-title>A Letter, Unfolding</h2>
-          <p data-letter-subtitle>Hover, tap, or breathe — it opens when you are ready.</p>
-        </div>
-        <div class="letter__wrap" data-letter>
-          <div class="letter__panel" data-letter-body></div>
-        </div>
+        <p class="hint">(click Steve to start)</p>
       </section>
 
-      <section class="section reasons" id="reasons">
-        <div class="section__title">
-          <h2 data-reasons-title>Reasons I Adore You</h2>
-          <p data-reasons-subtitle>Some are big, some are tiny, all are true.</p>
-        </div>
-        <div class="reasons__grid" data-reasons-grid></div>
+      <section id="dialogue" class="scene" aria-label="Dialogue scene">
+        <h2 class="scene-title">Steve needs your heart and your help</h2>
+        <div id="dialogue-box" class="dialogue-box"></div>
+        <div id="dialogue-options" class="dialogue-options"></div>
+        <button id="help-btn" class="btn hidden" type="button">Yes, I'll help Steve 🦊</button>
       </section>
 
-      <section class="section timeline" id="timeline">
-        <div class="section__title">
-          <h2 data-timeline-title>Our Little Constellations</h2>
-          <p data-timeline-subtitle>A few sparkling points in the sky we share.</p>
+      <section id="journey" class="scene" aria-label="Journey scene">
+        <div id="slide-frame" class="slide-frame">
+          <img id="journey-image" src="assets/journey1.png" alt="Steve traveling toward the castle" />
         </div>
-        <div class="timeline__track" data-timeline></div>
+        <p id="journey-caption" class="caption">Steve follows the lanterns and whispers Esther's name.</p>
+        <p class="journey-hint">Click to continue Steve's journey</p>
       </section>
 
-      <section class="section yes" id="yes">
-        <div class="yes__card">
-          <h2 data-final-title>Esther, be my Valentine?</h2>
-          <p data-final-subtitle>I promise to keep loving you with intention, softness, and a little magic.</p>
-          <div class="yes__actions">
-            <button class="btn" data-confetti data-yes>Yes</button>
-            <button class="btn btn--ghost" data-no>No</button>
+      <section id="quiz" class="scene" aria-label="Quiz scene">
+        <div class="quiz-overlay"></div>
+        <div class="quiz-content">
+          <h2 class="scene-title">Guide Steve to Esther</h2>
+          <p class="quiz-progress">Question <span id="q-index">1</span>/<span id="q-total">1</span></p>
+          <div class="question-card">
+            <p id="question-text" class="question-text"></p>
+            <div id="options-wrap" class="options-wrap"></div>
+            <div id="text-wrap" class="text-wrap hidden">
+              <input id="text-answer" type="text" placeholder="Type your answer..." />
+              <button id="submit-text" class="btn" type="button">Submit</button>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <section id="blackout" class="scene" aria-label="Blackout scene">
+        <div class="blackout-glitch"></div>
+      </section>
+
+      <section id="video" class="scene" aria-label="Arrival video scene">
+        <div class="arrive-frame">
+          <video id="arrive-video" src="assets/arrive.mp4" playsinline></video>
+        </div>
+      </section>
+
+      <section id="terminal" class="scene" aria-label="Terminal scene">
+        <div class="terminal-box">
+          <p id="terminal-text" class="terminal-text"></p>
+          <button id="proceed-btn" class="btn terminal-proceed hidden" type="button">Proceed</button>
+        </div>
+      </section>
+
+      <section id="decision" class="scene" aria-label="Decision scene">
+        <h2 class="scene-title">Esther, will you accept Steve's Valentine letter?</h2>
+        <div class="decision-actions">
+          <button id="yes-btn" class="btn" type="button">Yes 💖</button>
+          <button id="no-btn" class="btn btn-soft" type="button">No 😢</button>
+        </div>
+      </section>
+
+      <section id="final" class="scene" aria-label="Final scene">
+        <div class="final-bg-wrap">
+          <img id="final-image" src="assets/us.png" alt="Memory photo" />
+          <div class="final-overlay"></div>
+        </div>
+        <div class="letter-card">
+          <h2 class="scene-title">For Esther, My Wify Fox</h2>
+          <div id="letter-lines" class="letter-lines"></div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <p>Made with a heart full of you.</p>
-    </footer>
-
-    <div class="modal" data-modal>
-      <div class="modal__content" role="dialog" aria-modal="true" aria-label="Love letter">
-        <button class="modal__close" data-close>&times;</button>
-        <h3 data-modal-title>Dear Esther,</h3>
-        <p data-modal-body>
-          Loving you is my favorite art form. You are the melody I replay, the place I rest, the wild
-          idea that turned into a home. Every day with you is a Valentine. So here is me, asking
-          again: will you keep choosing me, too?
-        </p>
-      </div>
-    </div>
-
-    <script src="content.js"></script>
+    <audio id="bgm" loop src="assets/music.mp3"></audio>
+    <audio id="bgm2" loop src="assets/music2.mp3"></audio>
     <script src="script.js"></script>
   </body>
 </html>
